@@ -48,7 +48,7 @@ def print_results(N, p, r):
 train_data = os.path.join(os.getenv('', 'tmp'), 'train.txt')
 test_data = os.path.join(os.getenv('', 'tmp'), 'test.txt')
 
-print(train_data)
+print_results(train_data)
 model = train_supervised(input=train_data, epoch=50, lr=1.0, wordNgrams=5, verbose=2, minCount=1)
 print(*model.test(train_data))
 
